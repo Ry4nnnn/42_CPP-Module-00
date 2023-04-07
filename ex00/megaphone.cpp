@@ -6,7 +6,7 @@
 /*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 20:38:47 by welim             #+#    #+#             */
-/*   Updated: 2023/03/06 00:21:10 by welim            ###   ########.fr       */
+/*   Updated: 2023/03/07 17:48:17 by welim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int main(int ac, char **av)
 			while (j < (int)strlen(av[i]))
 			{
 				av[i][j] = toupper(av[i][j]);
-				// if (av[i][j] >= 'a' && av[i][j] <= 'z')
-				// 	av[i][j] -= 32;
 				j++;
 			}
 			std::cout << av[i] << ' ';
