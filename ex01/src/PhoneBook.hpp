@@ -6,13 +6,11 @@
 /*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:59:44 by welim             #+#    #+#             */
-/*   Updated: 2023/04/07 15:29:26 by welim            ###   ########.fr       */
+/*   Updated: 2023/04/11 20:42:25 by welim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-#include <cctype>
-#include <iostream>
 
 //----------COLOURS----------//
 /* Regular */
@@ -31,9 +29,11 @@ class   PhoneBook {
 		PhoneBook();
 		~PhoneBook();
 		void add();
-		void search();
+		void search(PhoneBook phonebook);
 		void exit();
-	
+		void print_contact(PhoneBook phonebook);
+		void print_one_contact(PhoneBook phonebook, std::string i);
 	private:
-		// Contact();
+		Contact _contact[8];
+		int _index;
 };

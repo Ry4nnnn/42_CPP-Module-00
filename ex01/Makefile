@@ -6,7 +6,7 @@
 #    By: welim <welim@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/05 20:38:49 by welim             #+#    #+#              #
-#    Updated: 2023/04/07 14:32:11 by welim            ###   ########.fr        #
+#    Updated: 2023/04/11 18:54:19 by welim            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = PhoneBook
 
 CPP = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g3
 
 RM = rm -rf
 

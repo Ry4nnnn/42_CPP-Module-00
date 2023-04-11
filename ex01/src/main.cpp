@@ -6,7 +6,7 @@
 /*   By: welim <welim@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 18:01:12 by welim             #+#    #+#             */
-/*   Updated: 2023/04/07 18:04:02 by welim            ###   ########.fr       */
+/*   Updated: 2023/04/11 18:56:06 by welim            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 static void	show_instructions()
 {
 	std::cout << CYAN;
-	std::cout << "==========List==========" << std::endl;
+	std::cout << "=============List=============" << std::endl;
 	std::cout << "1. ADD: save a new contact" << std::endl;
 	std::cout << "2. SEARCH: display all contacts" << std::endl;
 	std::cout << "3. EXIT: exits the program" << std::endl;
@@ -26,8 +26,8 @@ static void	show_instructions()
 
 int main(void)
 {
-	PhoneBook      phonebook;
-	std::string     cmd;
+	PhoneBook		phonebook;
+	std::string		cmd;
 
 	show_instructions();
 	while (1)
@@ -36,25 +36,19 @@ int main(void)
 		std::getline(std::cin, cmd);
 		if (std::cin.eof() || std::cin.fail())
 		{
-			std::cout << RED;
-			std::cout << "Error!" << std::endl;
-			std::cout << RESET;
+			std::cout << RED << "Error!" << std::endl << RESET;
 			std::exit(EXIT_FAILURE);
 		}
 		if (cmd.compare("ADD") == 0)
 			phonebook.add();
 		else if (cmd.compare("SEARCH") == 0)
-			phonebook.search();
+			phonebook.search(phonebook);
 		else if (cmd.compare("EXIT") == 0)
 			phonebook.exit();
 		else if (cmd.empty())
 			continue;
-		else
-		{
-			std::cout << RED;
-			std::cout << "Error: Command Not Found" << std::endl;
-			std::cout << RESET;
-		}
+		else 
+			std::cout << RED << "Error: Command Not Found" << std::endl << RESET;
 	}
 	return (0);
 }
