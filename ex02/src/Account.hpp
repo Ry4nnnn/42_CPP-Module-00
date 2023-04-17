@@ -12,14 +12,16 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include <iostream>
+#include <ctime>
+
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
 
 class Account {
 
-
-public:
+public:	
 
 	typedef Account		t;
 
